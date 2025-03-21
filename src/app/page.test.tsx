@@ -9,5 +9,6 @@ describe("描画のテスト", () => {
     render(<Default />)
 
     expect(screen.getByText("Hello World!")).toBeInTheDocument()
+    expect(screen.getByRole("button", { name: "Sample" })).toBeInTheDocument()
   })
 })
