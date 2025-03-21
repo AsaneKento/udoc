@@ -15,7 +15,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup node & Install Package
+      - name: Install Package
         uses: ./.github/actions/install-packages
 
   build:
@@ -25,7 +25,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup node & Restore installed packages
+      - name: Restore installed packages
         uses: ./.github/actions/restore-packages
 
       - name: Run build
@@ -38,7 +38,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup node & Restore installed packages
+      - name: Restore installed packages
         uses: ./.github/actions/restore-packages
 
       - uses: reviewdog/action-setup@v1
