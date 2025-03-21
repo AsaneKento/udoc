@@ -1,0 +1,20 @@
+name: "Install Package"
+
+defaults:
+  run:
+    shell: bash
+
+runs:
+  using: "composite"
+  steps:
+    - name: Setup node
+      uses: ./github/actions/setup-node
+
+    - name: Install packages
+      run: npm ci
+
+    - name: Cache packages
+      uses: actions/cache@v4
+      with:
+        path: node_modules
+        key: node_modules-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
