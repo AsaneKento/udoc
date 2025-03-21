@@ -30,6 +30,7 @@ const eslintConfig = [
     "next/core-web-vitals",
     "next/typescript",
     "prettier",
+    "plugin:storybook/recommended",
   ),
   {
     ignores: ignorePatterns,
