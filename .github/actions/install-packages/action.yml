@@ -1,0 +1,19 @@
+name: "Install Package"
+
+runs:
+  using: "composite"
+  steps:
+    - name: Setup node
+      uses: actions/setup-node@v4
+      with:
+        node-version-file: '.node-version'
+
+    - name: Install packages
+      run: npm ci
+      shell: bash
+
+    - name: Cache packages
+      uses: actions/cache@v4
+      with:
+        path: node_modules
+        key: node_modules-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
