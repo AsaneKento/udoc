@@ -1,9 +1,5 @@
 name: "Install Package"
 
-defaults:
-  run:
-    shell: bash
-
 runs:
   using: "composite"
   steps:
@@ -12,6 +8,7 @@ runs:
 
     - name: Install packages
       run: npm ci
+      shell: bash
 
     - name: Cache packages
       uses: actions/cache@v4
