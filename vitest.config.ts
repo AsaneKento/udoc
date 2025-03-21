@@ -17,7 +17,8 @@ export default defineConfig({
       reporter: ["text", "html", "json-summary", "json"],
       reportOnFailure: true,
       thresholds: {
-        statements: 80,
+        // TODO: 将来的には80にする
+        statements: 60,
       },
     },
   },

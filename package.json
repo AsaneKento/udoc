@@ -12,7 +12,9 @@
     "test": "vitest",
     "test:ci": "vitest run",
     "test:ui": "vitest --ui",
-    "test:coverage": "vitest --coverage"
+    "test:coverage": "vitest --coverage",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "next": "15.2.3",
@@ -20,10 +22,20 @@
     "react-dom": "19.0.0"
   },
   "devDependencies": {
+    "@chromatic-com/storybook": "3.2.6",
     "@eslint/eslintrc": "3",
+    "@storybook/addon-actions": "8.6.4",
+    "@storybook/addon-essentials": "8.6.7",
+    "@storybook/addon-interactions": "8.6.4",
+    "@storybook/addon-onboarding": "8.6.7",
+    "@storybook/blocks": "8.6.7",
+    "@storybook/nextjs": "8.6.7",
+    "@storybook/react": "8.6.7",
+    "@storybook/test": "8.6.7",
     "@tailwindcss/postcss": "4",
     "@testing-library/dom": "10.4.0",
     "@testing-library/react": "16.2.0",
+    "@testing-library/user-event": "14.6.1",
     "@types/node": "22",
     "@types/react": "19",
     "@types/react-dom": "19",
@@ -34,9 +46,11 @@
     "eslint-config-next": "15.2.3",
     "eslint-config-prettier": "10.1.1",
     "eslint-plugin-import": "2.31.0",
+    "eslint-plugin-storybook": "^0.11.6",
     "eslint-plugin-unused-imports": "4.1.4",
     "jsdom": "26.0.0",
     "prettier": "3.5.3",
+    "storybook": "^8.6.7",
     "tailwindcss": "4",
     "typescript": "5",
     "vite-tsconfig-paths": "5.1.4",
@@ -45,5 +59,10 @@
   "volta": {
     "node": "22.14.0",
     "npm": "11.2.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "plugin:storybook/recommended"
+    ]
   }
 }
