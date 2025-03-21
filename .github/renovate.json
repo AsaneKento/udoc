@@ -1,0 +1,19 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:base"],
+  "timezone": "Asia/Tokyo",
+  "labels": ["renovate"],
+  "separateMinorPatch": true,
+  "packageRules": [
+    {
+      "updateTypes": ["patch", "minor"],
+      "depTypeList": ["devDependencies"],
+      "automerge": true,
+      "labels": ["renovate", "automerge"]
+    },
+    {
+      "packageNames": ["^eslint"],
+      "groupName": "eslint packages"
+    }
+  ]
+}
