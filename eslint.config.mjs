@@ -23,6 +23,8 @@ const ignorePatterns = [
   "**/__generated__/**",
   "**/__generated_next__/**",
   "src/lib/ui/**",
+  "eslint.config.mjs",
+  ".storybook/**"
 ]
 
 const eslintConfig = [
